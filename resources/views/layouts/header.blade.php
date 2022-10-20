@@ -40,12 +40,17 @@
                       <a href="car-listing.html">Extranet</a>
 
                     </li>
+<<<<<<< HEAD
                     <li class="r-has-child">
                         <a href="car-listing.html">Devenir Partenaire</a>
 
                       </li>
                     <li><a href="gallery.html">A Propos de nous</a></li>
 
+=======
+                    <li><a href="drivers.html">DRIVERS</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+>>>>>>> refs/remotes/origin/main
                   </ul>
                 </nav>
               </div>
