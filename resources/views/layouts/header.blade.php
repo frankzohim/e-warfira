@@ -5,7 +5,7 @@
           <div class="row clearfix">
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div class="r-logo">
-                <a href="#" class="d-inline-block"><img src="assets/images/logo-white.png" class="img-fluid d-block" alt=""></a>
+                <a href="#" class="d-inline-block"><img src="{{ asset('assets/images/photo_2022-10-20_15-01-10.jpg') }}" class="img-fluid d-block" alt=""></a>
               </div>
               <a href="javaScript:void(0)" class="menu-icon"> <i class="fa fa-bars"></i> </a>
             </div>
@@ -40,17 +40,15 @@
                       <a href="car-listing.html">Extranet</a>
 
                     </li>
-<<<<<<< HEAD
+
                     <li class="r-has-child">
                         <a href="car-listing.html">Devenir Partenaire</a>
 
                       </li>
                     <li><a href="gallery.html">A Propos de nous</a></li>
 
-=======
-                    <li><a href="drivers.html">DRIVERS</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
->>>>>>> refs/remotes/origin/main
+
+
                   </ul>
                 </nav>
               </div>
@@ -60,7 +58,7 @@
       </div>
       <div class="r-slider owl-carousel" id="defaultHomeSlider">
         <div class="r-slider-item">
-          <img src="assets/images/main-slider-01.jpg" class="img-fluid d-block m-auto" alt="">
+          <img src="{{ asset('assets/images/air.jpg') }}" class="img-fluid d-block m-auto" alt="">
           <div class="container">
             <div class="r-slider-top-content">
               <h1 class="animated fadeInDown">Kia Rio <span>z</span></h1>
@@ -70,7 +68,7 @@
           </div>
         </div>
         <div class="r-slider-item">
-          <img src="assets/images/main-slider-04.jpg" class="img-fluid d-block m-auto" alt="">
+          <img src="{{ asset('assets/images/hotel-389256.jpg') }}" class="img-fluid d-block m-auto" alt="">
           <div class="container">
             <div class="r-slider-top-content">
               <h1>BMW <span>3</span></h1>
@@ -80,7 +78,7 @@
           </div>
         </div>
         <div class="r-slider-item">
-          <img src="assets/images/main-slider-05.jpg" class="img-fluid d-block m-auto" alt="">
+          <img src="{{ asset('assets/images/air.jpg') }}" class="img-fluid d-block m-auto" alt="">
           <div class="container">
             <div class="r-slider-top-content">
               <h1>Audi <span>A4</span></h1>
