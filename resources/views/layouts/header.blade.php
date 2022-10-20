@@ -50,7 +50,6 @@
                         <li><a href="car-booking.html">Car Booking</a></li>
                       </ul>
                     </li>
-                    <li><a href="gallery.html">GALLERY</a></li>
                     <li><a href="drivers.html">DRIVERS</a></li>
                     <li><a href="contact.html">CONTACT US</a></li>
                   </ul>
