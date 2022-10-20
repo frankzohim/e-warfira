@@ -29,30 +29,23 @@
                 <nav>
                   <ul>
                     <li class="r-has-child">
-                      <a href="index.html">HOME</a>
-                      <ul class="pl-0 ml-0">
-                        <li><a href="index.html">Home 01</a></li>
-                        <li><a href="index-02.html">Home 02</a></li>
-                        <li><a href="index-03.html">Home 03</a></li>
-                        <li><a href="index-04.html">Home 04</a></li>
-                      </ul>
+                      <a href="index.html">Vols</a>
+
                     </li>
                     <li class="r-has-child">
-                      <a href="about.html">ABOUT US</a>
-                      <ul class="pl-0 ml-0">
-                        <li><a href="faq.html">Faq</a></li>
-                      </ul>
+                      <a href="about.html">Hotels</a>
+
                     </li>
                     <li class="r-has-child">
-                      <a href="car-listing.html">VEHICLES</a>
-                      <ul class="pl-0 ml-0">
-                        <li><a href="car-list-map.html">Car List Map</a></li>
-                        <li><a href="car-booking.html">Car Booking</a></li>
-                      </ul>
+                      <a href="car-listing.html">Extranet</a>
+
                     </li>
-                    <li><a href="gallery.html">GALLERY</a></li>
-                    <li><a href="drivers.html">DRIVERS</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li class="r-has-child">
+                        <a href="car-listing.html">Devenir Partenaire</a>
+
+                      </li>
+                    <li><a href="gallery.html">A Propos de nous</a></li>
+
                   </ul>
                 </nav>
               </div>
@@ -69,7 +62,7 @@
               <h4 class="animated fadeInLeft">FOR RENT <strong>$50</strong> PER DAY</h4>
               <a href="#" class="btn btn-outlined animated fadeInUp"> Reserve Now </a>
             </div>
-          </div> 
+          </div>
         </div>
         <div class="r-slider-item">
           <img src="assets/images/main-slider-04.jpg" class="img-fluid d-block m-auto" alt="">

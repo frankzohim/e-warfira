@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
       <!-- PAGE TITLE -->
-      <title>Home - Royal Cars  :: Car, Bike Any Vehicle Rental HTML Template</title>
+      <title>Warfira</title>
 
       <!-- META-DATA -->
       <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -27,7 +27,7 @@
   <body>
     <!--
       <section id="r-customizer" class="r-customizer">
-            <div class="r-selector"> 
+            <div class="r-selector">
                   <span class="d-block text-center">Color Options</span>
                   <div class="r-color_section r-color_block">
                         <ul class="r-color_selector" id="r-color_selector">
@@ -40,7 +40,7 @@
                             <li class="r-color_7" data-attr="color-07"></li>
                             <li class="r-color_8" data-attr="color-08"></li>
                         </ul>
-                  </div>  
+                  </div>
             </div>
             <i id="r-selector_icon" class="fa fa-cog"></i>
       </section>
@@ -51,7 +51,7 @@
         @include('layouts.footer')
       </div>
       <div id="r-to-top" class="r-to-top"><i class="fa fa-angle-up"></i></div>
-      
+
       <!-- JQUERY:: JQUERY.JS -->
       <script src="assets/js/jquery.min.js"></script>
 
