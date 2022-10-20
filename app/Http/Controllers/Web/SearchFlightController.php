@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class SearchFlightController extends Controller
 {
     public function __invoke () {
-        return view('search');
+        return view('homepage');
     }
 }
