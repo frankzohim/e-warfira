@@ -5,14 +5,14 @@
           <div class="row clearfix">
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div class="r-logo">
-                <a href="#" class="d-inline-block"><img src="assets/images/logo-white.png" class="img-fluid d-block" alt=""></a>
+                <a href="{{ route('homepage') }}" class="d-inline-block"><img src="{{ asset('assets/images/logo-white.png') }}" class="img-fluid d-block" alt=""></a>
               </div>
               <a href="javaScript:void(0)" class="menu-icon"> <i class="fa fa-bars"></i> </a>
             </div>
             <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12">
               <div class="r-header-action float-left">
-                <a href="login-register.html"> <img src="assets/images/icon-lock.png" alt=''> <span>Login</span></a>
-                <a href="#" class="r-search"> <img src="assets/images/icon-search.png" alt=''> <span>Search</span></a>
+                <a href="login-register.html"> <img src="{{ asset("assets/images/icon-lock.png") }}" alt=''> <span>Login</span></a>
+                <a href="#" class="r-search"> <img src="{{ asset("assets/images/icon-search.png") }}" alt=''> <span>Search</span></a>
 
                 <div class="r-search-wrapper">
                   <div class="r-search-inner">
@@ -29,19 +29,18 @@
                 <nav>
                   <ul>
                     <li class="r-has-child">
-                      <a href="index.html">Vols</a>
+                      <a href="index.html">VOLS</a>
 
                     </li>
                     <li class="r-has-child">
-                      <a href="about.html">Hotels</a>
+                      <a href="about.html">HOTELS</a>
 
                     </li>
                     <li class="r-has-child">
-                      <a href="car-listing.html">Extranet</a>
+                      <a href="car-listing.html">EXTRANET</a>
 
                     </li>
-                    <li><a href="drivers.html">DRIVERS</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="drivers.html">ENREGISTREZ VOTRE ETABLISSEMENT</a></li>
                   </ul>
                 </nav>
               </div>
