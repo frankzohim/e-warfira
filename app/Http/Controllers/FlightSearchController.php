@@ -56,7 +56,8 @@ class FlightSearchController extends Controller
             ]);
             $response = $response->getBody();
             $response = json_decode($response);
-            return view('search')->with('flights', $response->data);
+            ($response->data);
+            return view('flights.listing')->with('flights', $response->data);
         } 
         catch (GuzzleException $exception) {
             return $exception;

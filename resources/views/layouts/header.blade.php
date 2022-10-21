@@ -5,14 +5,18 @@
           <div class="row clearfix">
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div class="r-logo">
+<<<<<<< HEAD
                 <a href="#" class="d-inline-block"><img src="{{ asset('assets/images/photo_2022-10-20_15-01-10.jpg') }}" class="img-fluid d-block" alt=""></a>
+=======
+                <a href="{{ route('homepage') }}" class="d-inline-block"><img src="{{ asset('assets/images/logo-white.png') }}" class="img-fluid d-block" alt=""></a>
+>>>>>>> refs/remotes/origin/main
               </div>
               <a href="javaScript:void(0)" class="menu-icon"> <i class="fa fa-bars"></i> </a>
             </div>
             <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12">
               <div class="r-header-action float-left">
-                <a href="login-register.html"> <img src="assets/images/icon-lock.png" alt=''> <span>Login</span></a>
-                <a href="#" class="r-search"> <img src="assets/images/icon-search.png" alt=''> <span>Search</span></a>
+                <a href="login-register.html"> <img src="{{ asset("assets/images/icon-lock.png") }}" alt=''> <span>Login</span></a>
+                <a href="#" class="r-search"> <img src="{{ asset("assets/images/icon-search.png") }}" alt=''> <span>Search</span></a>
 
                 <div class="r-search-wrapper">
                   <div class="r-search-inner">
@@ -29,17 +33,18 @@
                 <nav>
                   <ul>
                     <li class="r-has-child">
-                      <a href="index.html">Vols</a>
+                      <a href="index.html">VOLS</a>
 
                     </li>
                     <li class="r-has-child">
-                      <a href="about.html">Hotels</a>
+                      <a href="about.html">HOTELS</a>
 
                     </li>
                     <li class="r-has-child">
-                      <a href="car-listing.html">Extranet</a>
+                      <a href="car-listing.html">EXTRANET</a>
 
                     </li>
+<<<<<<< HEAD
 
                     <li class="r-has-child">
                         <a href="car-listing.html">Devenir Partenaire</a>
@@ -49,6 +54,9 @@
 
 
 
+=======
+                    <li><a href="drivers.html">ENREGISTREZ VOTRE ETABLISSEMENT</a></li>
+>>>>>>> refs/remotes/origin/main
                   </ul>
                 </nav>
               </div>
@@ -92,45 +100,38 @@
       <div class="r-car-search">
         <div class="container">
           <div class="r-top-form-title animated fadeInUp">
-            <span>120+ CARS TYPE & BRANDS</span>
-            <h3>Search Your <b>Best Cars.</b></h3>
+            <span>+400 AGENCE AÉRIENNE</span>
+            <h3>Rechercher <b>Votre Vol.</b></h3>
           </div>
-          <form>
+          <form action="/api/search" class="mt-3" method="POST">
             <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+              <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
                 <div class="form-group">
-                  <label> Car Brand </label>
-                  <select class="form-control">
-                    <option>Any Brands</option>
-                    <option>Any Brands</option>
-                    <option>Any Brands</option>
-                    <option>Any Brands</option>
-                  </select>
+                  <label> Départ </label>
+                   <input type="text" class="form-control" placeholder="Ville de départ" name="from" required>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                  <label> Destination </label>
+                   <input type="text" class="form-control" placeholder="Ville d'arrivée" name="to" required>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                  <label> Date </label>
+                   <input type="date" class="form-control" placeholder="Sélectionner une date" name="date" required>
                 </div>
               </div>
               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="form-group">
-                  <label> Car Type </label>
-                  <select class="form-control">
-                    <option>Any Type</option>
-                    <option>Any Type</option>
-                    <option>Any Type</option>
-                    <option>Any Type</option>
-                  </select>
+                  <label> Passagers </label>
+                   <input type="number" class="form-control" placeholder="Passagers" name="passengers" required>
                 </div>
               </div>
               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="form-group">
-                  <label> Car Price </label>
-                  <select class="form-control">
-                    <option>Price Low to High</option>
-                    <option>Price High to Low</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="form-group">
-                  <input type="submit" class="form-control btn-primary" value="Search Car Now">
+                  <input type="submit" class="form-control btn-primary" value="Recherchez">
                 </div>
               </div>
             </div>
