@@ -5,14 +5,14 @@
           <div class="row clearfix">
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div class="r-logo">
-                <a href="{{ route('homepage') }}" class="d-inline-block"><img src="{{ asset('assets/images/logo-white.png') }}" class="img-fluid d-block" alt=""></a>
+                <a href="{{ route('homepage') }}" class="d-inline-block"><img src="{{ asset('assets/images/logo-warfira.png') }}" class="img-fluid d-block" alt=""></a>
               </div>
               <a href="javaScript:void(0)" class="menu-icon"> <i class="fa fa-bars"></i> </a>
             </div>
             <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12">
               <div class="r-header-action float-left">
-                <a href="login-register.html"> <img src="{{ asset("assets/images/icon-lock.png") }}" alt=''> <span>Login</span></a>
-                <a href="#" class="r-search"> <img src="{{ asset("assets/images/icon-search.png") }}" alt=''> <span>Search</span></a>
+                <a href="login-register.html"> <img src="{{ asset("assets/images/icon-lock.png") }}" alt=''> <span>Connexion</span></a>
+                <a href="#" class="r-search"> <img src="{{ asset("assets/images/icon-search.png") }}" alt=''> <span>Recherche</span></a>
 
                 <div class="r-search-wrapper">
                   <div class="r-search-inner">
@@ -40,7 +40,7 @@
                       <a href="car-listing.html">EXTRANET</a>
 
                     </li>
-                    <li><a href="drivers.html">ENREGISTREZ VOTRE ETABLISSEMENT</a></li>
+                  
                   </ul>
                 </nav>
               </div>
@@ -50,32 +50,32 @@
       </div>
       <div class="r-slider owl-carousel" id="defaultHomeSlider">
         <div class="r-slider-item">
-          <img src="assets/images/main-slider-01.jpg" class="img-fluid d-block m-auto" alt="">
+          <img src="assets/images/slide-1.png" class="img-fluid d-block m-auto" alt="">
           <div class="container">
             <div class="r-slider-top-content">
-              <h1 class="animated fadeInDown">Kia Rio <span>z</span></h1>
-              <h4 class="animated fadeInLeft">FOR RENT <strong>$50</strong> PER DAY</h4>
-              <a href="#" class="btn btn-outlined animated fadeInUp"> Reserve Now </a>
+              <h1 class="animated fadeInDown">Découvrez avec <span>nous</span></h1>
+              <h4 class="animated fadeInLeft">une autre  <strong>façon</strong> de voyager</h4>
+              <a href="#" class="btn btn-outlined animated fadeInUp"> Réservez Maintenant </a>
             </div>
           </div>
         </div>
         <div class="r-slider-item">
-          <img src="assets/images/main-slider-04.jpg" class="img-fluid d-block m-auto" alt="">
+          <img src="assets/images/slide-2.jpg" class="img-fluid d-block m-auto" alt="">
           <div class="container">
             <div class="r-slider-top-content">
-              <h1>BMW <span>3</span></h1>
-              <h4>FOR RENT <strong>$150</strong> PER DAY</h4>
-              <a href="#" class="btn btn-outlined"> Reserve Now </a>
+              <h1>L'expérience  <span>unique </span>de</h1>
+              <h4>voyage  <strong>et</strong> d’hébergement </h4>
+              <a href="#" class="btn btn-outlined"> Réservez Maintenant </a>
             </div>
           </div>
         </div>
         <div class="r-slider-item">
-          <img src="assets/images/main-slider-05.jpg" class="img-fluid d-block m-auto" alt="">
+          <img src="assets/images/slide-3.png" class="img-fluid d-block m-auto" alt="">
           <div class="container">
             <div class="r-slider-top-content">
-              <h1>Audi <span>A4</span></h1>
-              <h4>FOR RENT <strong>$100</strong> PER DAY</h4>
-              <a href="#" class="btn btn-outlined"> Reserve Now </a>
+              <h1>Allons  <span>à la découverte </span></h1>
+              <h4>des merveilles <strong>de l'Afrique </strong></h4>
+              <a href="#" class="btn btn-outlined"> Réservez Maintenant </a>
             </div>
           </div>
         </div>

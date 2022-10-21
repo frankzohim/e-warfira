@@ -158,23 +158,17 @@ veloppent des échanges en réseau, nous parlons clairement de notre marketing d
     </div>
   </section>
 
-
-  <div class="content-area">
-    <div class="google-map">
-        <div id="map-canvas"></div>
-    </div>
-
     <div class="r-car-search r-search-map-over">
       <div class="container">
         <div class="r-search-map-over-in">
           <div class="r-top-form-title">
-            <h3>Find Car on Map</h3>
+            <h3>Rechercher un vol</h3>
           </div>
           <form>
             <div class="row">
               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="form-group">
-                  <label> Car Brand </label>
+                  <label> Départ </label>
                   <select class="form-control">
                     <option>Any Brands</option>
                     <option>Any Brands</option>
@@ -185,7 +179,7 @@ veloppent des échanges en réseau, nous parlons clairement de notre marketing d
               </div>
               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="form-group">
-                  <label> Car Type </label>
+                  <label> Destination </label>
                   <select class="form-control">
                     <option>Any Type</option>
                     <option>Any Type</option>
@@ -196,7 +190,7 @@ veloppent des échanges en réseau, nous parlons clairement de notre marketing d
               </div>
               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="form-group">
-                  <label> Car Price </label>
+                  <label> Date </label>
                   <select class="form-control">
                     <option>Price Low to High</option>
                     <option>Price High to Low</option>
@@ -205,7 +199,7 @@ veloppent des échanges en réseau, nous parlons clairement de notre marketing d
               </div>
               <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="form-group">
-                  <input type="submit" class="form-control btn-primary" value="Search Car Now">
+                  <input type="submit" class="form-control btn-primary" value="Rechercher Maintenant">
                 </div>
               </div>
             </div>
@@ -227,7 +221,7 @@ veloppent des échanges en réseau, nous parlons clairement de notre marketing d
             <div class="r-best-offer-single">
               <div class="r-best-offer-in">
                 <div class="r-offer-img">
-                  <a class="d-inline-block" href="#"><img src="{{ asset('assets/images/top-dest-hotel-10417.jpg') }}" class="img-fluid d-block m-auto" alt=""></a>
+                  <a class="d-inline-block" href="#"><img src="{{ asset('assets/images/top-dest-hotel-45206.jpg') }}" class="img-fluid d-block m-auto" alt=""></a>
                   <div class="r-offer-img-over">
                     <i class="fa fa-search"></i>
                   </div>
@@ -252,7 +246,7 @@ veloppent des échanges en réseau, nous parlons clairement de notre marketing d
             <div class="r-best-offer-single">
               <div class="r-best-offer-in">
                 <div class="r-offer-img">
-                  <a class="d-inline-block" href="#"><img src="{{ asset("assets/images/top-dest-hotel-422051.jpg") }}" class="img-fluid d-block m-auto" alt=""></a>
+                  <a class="d-inline-block" href="#"><img src="{{ asset("assets/images/top-dest-hotel-45206.jpg") }}" class="img-fluid d-block m-auto" alt=""></a>
                   <div class="r-offer-img-over">
                     <i class="fa fa-search"></i>
                   </div>

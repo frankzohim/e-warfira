@@ -2330,7 +2330,7 @@ body{font-size:16px;line-height:28px;font-family:"Roboto", sans-serif;color:#5d6
 				  @else
 					<div class="alert alert-success alert-dismissible fade show" role="alert">
 						<span class="alert-icon"><i class="ni ni-like-2"></i></span>
-						<span class="alert-text"><strong>{{ __('No results!') }} &nbsp;&nbsp;</strong> <strong><a href="{{ route('flight.listing') }}"> {{ __('Restart the search') }}</a></strong></span>
+						<span class="alert-text"><strong>{{ __('No results!') }} &nbsp;&nbsp;</strong> <strong><a href="#"> {{ __('Restart the search') }}</a></strong></span>
 					
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>

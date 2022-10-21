@@ -11,7 +11,7 @@
       <meta name="keywords" content="">
 
       <!-- FAVICON -->
-      <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}">
+      <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
 
       <!-- CSS:: FONTS -->
       <link href="../../../css?family=Poppins:300,400,500,600,700" rel="stylesheet">
