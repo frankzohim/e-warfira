@@ -5,11 +5,11 @@
           <div class="row clearfix">
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div class="r-logo">
-<<<<<<< HEAD
-                <a href="#" class="d-inline-block"><img src="{{ asset('assets/images/photo_2022-10-20_15-01-10.jpg') }}" class="img-fluid d-block" alt=""></a>
-=======
-                <a href="{{ route('homepage') }}" class="d-inline-block"><img src="{{ asset('assets/images/logo-white.png') }}" class="img-fluid d-block" alt=""></a>
->>>>>>> refs/remotes/origin/main
+
+                <a href="{{ route('homepage') }}" class="d-inline-block"><img src="{{ asset('assets/images/photo_2022-10-20_15-01-10.jpg') }}" class="img-fluid d-block" alt=""></a>
+
+
+
               </div>
               <a href="javaScript:void(0)" class="menu-icon"> <i class="fa fa-bars"></i> </a>
             </div>
@@ -44,19 +44,14 @@
                       <a href="car-listing.html">EXTRANET</a>
 
                     </li>
-<<<<<<< HEAD
 
                     <li class="r-has-child">
                         <a href="car-listing.html">Devenir Partenaire</a>
 
                       </li>
                     <li><a href="gallery.html">A Propos de nous</a></li>
-
-
-
-=======
                     <li><a href="drivers.html">ENREGISTREZ VOTRE ETABLISSEMENT</a></li>
->>>>>>> refs/remotes/origin/main
+
                   </ul>
                 </nav>
               </div>
