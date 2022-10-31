@@ -1,13 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+
 
 class FlightSearchController extends Controller
 {
     public function __invoke(Request $request, Client $client)
     {
+        //dd(Auth::user()->name);
+        //Saving data to session
+        session(['from' => $request['from']]);
+        session(['from-code' => $request['from-code']]);
+        session(['to' => $request['to']]);
+        session(['to-code' => $request['to-code']]);
+        session(['passengers' => $request['passengers']]);
+
         $url = 'https://test.api.amadeus.com/v2/shopping/flight-offers';
 
        if (session('access_token')) {
@@ -32,8 +42,8 @@ class FlightSearchController extends Controller
             'originDestinations' => [
                 [
                     'id' => 1,
-                    'originLocationCode' => $request['from'],
-                    'destinationLocationCode' => $request['to'],
+                    'originLocationCode' => $request['from-code'],
+                    'destinationLocationCode' => $request['to-code'],
                     'departureDateTimeRange' => [
                         'date' => $request['date']
                     ]
@@ -56,7 +66,7 @@ class FlightSearchController extends Controller
             ]);
             $response = $response->getBody();
             $response = json_decode($response);
-            ($response->data);
+            //dd($response->data[0]);
             return view('flights.listing')->with('flights', $response->data);
         } 
         catch (GuzzleException $exception) {

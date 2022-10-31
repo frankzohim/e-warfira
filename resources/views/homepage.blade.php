@@ -1,6 +1,7 @@
 @extends('layouts.master')
+@section('title', __('Warfira') )
 @section('content')
-
+<link rel="stylesheet" href="{{ asset('assets/css/autocomplete.css') }}">
   <section id="r-advantages-part" class="r-advantages-part">
     <div class="r-advantage-main-part">
       <div class="container clearfix">
@@ -298,7 +299,15 @@ veloppent des échanges en réseau, nous parlons clairement de notre marketing d
   </section>
 
 
-
+  <script src="{{ asset('assets/js/typeahead.js') }}"></script>
+	<script>
+		var airports = @json($airports);
+				
+		autocomplete(document.getElementById("from"), airports);
+    autocomplete(document.getElementById("to"), airports);
+					
+				   
+	</script>
 
 
 

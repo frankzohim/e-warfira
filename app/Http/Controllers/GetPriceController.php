@@ -11,6 +11,12 @@ class GetPriceController extends Controller
     public function __invoke (Request $request, Client $client)
     {
        $url = 'https://test.api.amadeus.com/v1/shopping/flight-offers/pricing';
+       
+       $locations['from'] = $request['from'];
+       $locations['from-code'] = $request['from-code'];
+       $locations['to'] = $request['to'];
+       $locations['to-code'] = $request['to-code'];
+       $locations['passengers'] = $request['passengers'];
         if  (session('access_token')) {
             $access_token  =  session('access_token');
         }  else  {
@@ -39,7 +45,9 @@ class GetPriceController extends Controller
             ]);
             $response = $response->getBody();
             $response = json_decode($response);
-            return view('price')->with('data', $response->data);
+            $data = $response->data;
+            //dd($data);
+            return view('flights.booking', compact('data','locations'));
         } 
         catch (GuzzleException $exception) {
             return $exception->getMessage();

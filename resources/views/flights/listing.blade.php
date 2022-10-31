@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', __('flight') )
+@section('title', __('Liste des vols') )
 @section('content')
     <link rel="stylesheet" href="trizen/css/jquery-ui.css">
   
@@ -2161,6 +2161,9 @@ body{font-size:16px;line-height:28px;font-family:"Roboto", sans-serif;color:#5d6
 }
 @media only screen and (min-width:320px) and (max-width:479px){.copy-right-content{-ms-flex-pack:center !important;justify-content:center !important;text-align:center !important;}
 }
+.color-logo{
+    color: #26348B;
+}
 </style>
 		  <div style="background-image:url('{{ asset("frontend/images/bread-bg7.jpg") }}'); background-size: cover; height: 200px;">
               <div class="r-header-in-over">
@@ -2275,50 +2278,95 @@ body{font-size:16px;line-height:28px;font-family:"Roboto", sans-serif;color:#5d6
                 </div><!-- end sidebar -->
                  
                 </div>
+               
                 <div class="col-lg-8 col-md-8 col-sm-12">
+
 				  @if(count($flights))
                         <div class="my-service-list">
                             
                             @foreach ($flights as $flight)
-                          
-                             <div class="card-item flight-card flight--card card-item-list card-item-list-2">
-                                <div class="card-img">
-                                    <img src="{{ asset('frontend/images/airline-img7.png') }}" alt="flight-logo-img">
-                                </div>
-                                <div class="card-body">
-                                    <div class="card-top-title d-flex justify-content-between">
-                                        <div>
-                                            <h3 class="card-title font-size-17"> 
-                                    {{$flight->price->total }} - {{ $flight->price->total }} </h3>
-                                            <p class="card-meta font-size-14">Date : {{ $flight->lastTicketingDate }}</p>
-                                        </div>
-                                        <div>
-                                            <div class="text-right">
-                                                <span class="font-weight-regular font-size-14 d-block">{{ __('Bookable Seats') }}: {{ $flight->numberOfBookableSeats }}</span>
-                                                <h6 class="font-weight-bold text-black">{{  $flight->price->total}} EUR </h6>
+
+                            <div class="card-item flight-card flight--card  card-item-list-2" style="padding: 0;">
+
+                                <div class="d-flex flex-column align-items-stretch ">
+                                    <div class="d-flex flex-row justify-content-between bd-highlight mb-3" style="padding: 15px 20px;">
+                                        <div class="d-flex flex-column align-items-center p-2 bd-highlight">
+                                            <div>
+                                                <img src="{{ asset('assets/images/airlines-logo/KQ.gif') }}" alt="">
                                             </div>
+                                            <div>
+                                                Kenya airwaysKQ 571
+                                            </div>
+                                            
                                         </div>
-                                    </div><!-- end card-top-title -->
-									<form action="" method="POST">
-									  @csrf
-									    <input type="hidden" id="flightId" name="flightId" value="{{ $flight->id ?? "-1" }}">
-										<input type="hidden" id="productType" name="productType" value="3">
-										<ul class="list-items list-items-2 py-2">
-											<li><span>{{ __('Class') }}:</span>{{ $flight->travelerPricings[0]->fareDetailsBySegment[0]->cabin }}</li>
-											<li><span>{{ __('Departure time') }}:</span>{{  $flight->price->total }} H</li>
-											<li><span>{{ __('Duration of the trip') }}:</span> {{  $flight->itineraries[0]->duration }}</li>
-											 
-										</ul>
-										
-										   
-										
-											
-											<button class="theme-btn text-center w-100 mb-2" type="submit" id="addcart">
-											<i class="mr-2 font-size-18"></i>{{ __('Book this flight') }}
-										</button>
-									</form>
-                                </div><!-- end card-body -->
-                            </div><!-- end card-item -->
+                                        <div class="d-flex flex-column align-items-center p-2 bd-highlight">
+                                            <div class="color-logo" style="font-weight: bold;">
+                                                15:55
+                                            </div>
+                                            <div>
+                                                {{ session('from') }}
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center p-2 bd-highlight">
+                                            <div  style="color:#848484;">
+                                                @php
+                                                    $time = substr($flight->itineraries[0]->duration,2);
+                                                    $time = substr_replace($time, ' ', 3, 0)
+                                                @endphp
+                                                {{ strtolower($time)  }}
+                                            </div>
+                                            <div>
+                                                <img src="{{ asset('assets/images/airlines-logo/stop_1.png') }}" alt="">
+                                            </div>
+                                            <div>
+                                                Stop:1NBO
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center p-2 bd-highlight">
+                                            <div class="color-logo" style="font-weight: bold;">
+                                                06:30
+                                            </div>
+                                            <div>
+                                                {{ session('to') }}
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center justify-content-end p-2 bd-highlight">
+                                            <div class="color-logo" style="font-size: 15px; font-weight:bold">
+                                                € {{ $flight->price->total }}
+                                            </div>
+                                            <div>
+                                                Non-Refundable
+                                            </div>
+                                            <div>
+                                                <button class="form-control btn-primary"
+                                                onclick="document.getElementById('{{ 'form'.$flight->id }}').submit()" style=”cursor: pointer;”>
+                                                    Reserver
+                                                </button>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="w-100" style="background-color: #F2F3F4; color:#26348B;">
+                                        &nbsp; <i class="fa fa-info-circle"></i> Détails du vol
+                                    </div>
+                                </div>
+    
+    
+                                 
+                            </div>
+                            <form action="/api/price" hidden id="{{ 'form' . $flight->id }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="flight" value="{{ json_encode($flight) }}">
+                                <input type="hidden" name="from" value="{{ session('from') }}">
+                                <input type="hidden" name="from-code" value="{{ session('from-code') }}">
+                                <input type="hidden" name="to" value="{{ session('to') }}">
+                                <input type="hidden" name="to-code" value="{{ session('to-code') }}">
+                                <input type="hidden" name="passengers" value="{{ session('passengers') }}">
+                            </form>
+                            
                             @endforeach
                              
                              

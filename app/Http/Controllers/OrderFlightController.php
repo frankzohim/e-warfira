@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Http\Request;
@@ -10,6 +10,7 @@ class OrderFlightController extends Controller
 {
     public function __invoke (Request $request, Client $client)
     {
+        //dd(Auth::user()->name);
         $url = 'https://test.api.amadeus.com/v1/booking/flight-orders';
        if (session('access_token')) {
             $access_token = session('access_token');
@@ -18,12 +19,15 @@ class OrderFlightController extends Controller
             session(['access_token' => $access_token]);
         }
 
+        $sample = json_decode($request['data'], true);
+        //dd($sample['flightOffers']);
+        //$datas = json_decode($request['data']);
+        //dd($datas->flightOffers);
         $data = [
             'data' => [
                 'type' => 'flight-order',
-                'flightOffers' => [
-                    json_decode($request['data'])
-                ],
+                'flightOffers' => $sample['flightOffers']
+                ,
                 'travelers' => [
                     [
                         'id' => '1',
@@ -62,6 +66,8 @@ class OrderFlightController extends Controller
             ]
         ];
 
+        //dd($data);
+
         try {
             $response = $client->post($url, [
                 'headers' => [
@@ -71,8 +77,12 @@ class OrderFlightController extends Controller
                 'json' => $data
             ]);
             $response = $response->getBody();
-            $response = json_decode($response);
-            return view('confirm')->with('flight', $response->data);
+            $flight = json_decode($response);
+            //dd($flight);
+            session(['flight' => $flight]);
+       
+            
+            return redirect()->route('payment.create');
         } catch (GuzzleException $exception) {
             return $exception->getMessage();
         }

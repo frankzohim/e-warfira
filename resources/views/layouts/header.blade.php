@@ -92,13 +92,17 @@
               <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
                 <div class="form-group">
                   <label> Départ </label>
-                   <input type="text" class="form-control" placeholder="Ville de départ" name="from" required>
+                   <input type="text" class="form-control" id="from" placeholder="Ville de départ" name="from" 
+                   autocomplete="off" required>
+                   <input type="hidden" name="from-code" id="from-code" value="">
                 </div>
               </div>
               <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
                 <div class="form-group">
                   <label> Destination </label>
-                   <input type="text" class="form-control" placeholder="Ville d'arrivée" name="to" required>
+                   <input type="text" class="form-control" id="to" placeholder="Ville d'arrivée" name="to" 
+                   autocomplete="off" required>
+                   <input type="hidden" name="to-code" id="to-code" value="">
                 </div>
               </div>
               <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
@@ -123,4 +127,3 @@
         </div>
       </div>
     </div>
-  </header>

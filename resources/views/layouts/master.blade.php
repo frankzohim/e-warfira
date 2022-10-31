@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
       <!-- PAGE TITLE -->
-      <title>Warfira</title>
+      <title>@yield('title')</title>
 
       <!-- META-DATA -->
       <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -16,6 +16,9 @@
       <!-- CSS:: FONTS -->
       <link href="../../../css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
+      <!-- CSS:: Bootstrap 5 -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      
       <!-- CSS:: ANIMATE -->
       <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/plugins/animate/animate.css') }}">
 
@@ -65,6 +68,7 @@
       <!-- JQUERY:: BOOTSTRAP.JS -->
       <script src="assets/js/tether.min.js"></script>
       <script src="assets/js/bootstrap.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
       <!-- JQUERY:: PLUGINS -->
       <script src="assets/js/plugins/owl/owl.carousel.min.js"></script>
