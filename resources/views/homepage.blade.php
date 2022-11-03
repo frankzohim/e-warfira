@@ -2,9 +2,13 @@
 @section('title', __('Warfira') )
 @section('content')
 <link rel="stylesheet" href="{{ asset('assets/css/autocomplete.css') }}">
+
   <section id="r-advantages-part" class="r-advantages-part">
+    
     <div class="r-advantage-main-part">
       <div class="container clearfix">
+       
+
         <div class="advantage-head">
           <span>Découvrez avec nous, une autre façon de voyager</span>
           <h2>Warfira<b></b></h2>

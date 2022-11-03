@@ -78,11 +78,14 @@ class OrderFlightController extends Controller
             ]);
             $response = $response->getBody();
             $flight = json_decode($response);
-            //dd($flight);
-            session(['flight' => $flight]);
+            $data = $flight->data;
+            //dd($data);
+            $price = $data->flightOffers[0]->price->total;
+            $reference = $data->associatedRecords[0]->reference;
+
+            //dd($reference);
        
-            
-            return redirect()->route('payment.create');
+            return redirect()->route('stripe',['price'=>$price, 'reference'=>$reference]);
         } catch (GuzzleException $exception) {
             return $exception->getMessage();
         }

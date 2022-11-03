@@ -10,7 +10,16 @@ class FlightSearchController extends Controller
 {
     public function __invoke(Request $request, Client $client)
     {
-        //dd(Auth::user()->name);
+        //Validating data
+        //dd($request['request_type']);
+        $validatedData = $request->validate([
+            'request_type' => ['required','string','in:oneway,roundtrip,multicity'], 
+            'from' => ['required', 'string'],
+            'from-code' => ['required','string'],
+            'to' => ['required', 'string'],
+            'to-code' => ['required','string'],
+            'passengers' => ['required','integer'],
+         ]);
         //Saving data to session
         session(['from' => $request['from']]);
         session(['from-code' => $request['from-code']]);

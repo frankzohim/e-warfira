@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Web\SearchFlightController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\StripePaymentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +31,14 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 
     Route::get('/payment', [PaymentController::class, 'create'])->name('payment.create');
 
+});
+
+/*Route::get('stripe', [StripePaymentController::class, 'stripe']);
+Route::post('stripe', [StripePaymentController::class, 'stripe'])->name('stripe.post');*/
+
+Route::controller(StripePaymentController::class)->group(function(){
+    Route::get('stripe/{price}/{reference}', 'stripe')->name('stripe');
+    Route::post('stripe', 'stripePost')->name('stripe.post');
 });
 
 

@@ -4,7 +4,7 @@
         <div class="row clearfix">
           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="r-footer-block">
-              <img src="assets/images/footer-logo.png" class="d-block img-fluid" alt="">
+              <img src="{{ asset('assets/images/footer-logo.png') }}" class="d-block img-fluid" alt="">
               <p>
                 We know the difference is in the details and that’s why our car rental services, in the tourism and business industry, stand out for their quality.
               </p>
@@ -59,7 +59,7 @@
           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="r-footer-block">
               <div class="r-footer-widget r-footer-map">
-                <a href="#"> <img src="assets/images/icon-footer-map.png" alt="" class="icon"> RoyalCars on Map</a>
+                <a href="#"> <img src="{{ asset('assets/images/icon-footer-map.png') }}" alt="" class="icon"> RoyalCars on Map</a>
               </div>
               <div class="r-footer-widget r-footer-nav">
                 <h6>ACCOUNT INFORMATION</h6>

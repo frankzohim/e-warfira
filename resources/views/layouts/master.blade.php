@@ -19,13 +19,17 @@
       <!-- CSS:: Bootstrap 5 -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       
+      <!-- CSS:: DATEPICKER -->
+      <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/plugins/datepicker/datepicker.css') }}">
+
       <!-- CSS:: ANIMATE -->
       <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/plugins/animate/animate.css') }}">
 
       <!-- CSS:: MAIN -->
       <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css') }}">
       <link rel="stylesheet" type="text/css" id="r-color-roller" href="{{ asset('assets/color-files/color-08.css') }}">
-
+      <script src="https://kit.fontawesome.com/97e37c6653.js" crossorigin="anonymous"></script>
+      @yield('OtherStyle')
   </head>
   <body>
     <!--
@@ -67,13 +71,17 @@
 
       <!-- JQUERY:: BOOTSTRAP.JS -->
       <script src="assets/js/tether.min.js"></script>
-      <script src="assets/js/bootstrap.min.js"></script>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
       <!-- JQUERY:: PLUGINS -->
       <script src="assets/js/plugins/owl/owl.carousel.min.js"></script>
       <script src="assets/js/plugins/lightcase/lightcase.js"></script>
 
+      <!-- JQUERY:: DATEPICKER.JS -->
+      <script src="assets/js/plugins/datepicker/moment-with-locales.min.js"></script>
+      <script src="assets/js/plugins/datepicker/moment-timezone.js"></script>
+      <script src="assets/js/plugins/datepicker/bootstrap-datepicker.js"></script>
 
       <!-- JQUERY:: MAP -->
       <script src="assets/js/map.js"></script>
@@ -81,6 +89,6 @@
 
       <!-- JQUERY:: CUSTOM.JS -->
       <script src="assets/js/custom.js"></script>
-
+      @yield('OtherScript')
   </body>
 </html>
